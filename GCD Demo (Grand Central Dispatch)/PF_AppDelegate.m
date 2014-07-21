@@ -2,19 +2,22 @@
 //  AppDelegate.m
 //  GCD Demo (Grand Central Dispatch)
 //
-//  Created by user on 14-5-19.
+//  Created by PFei_He on 14-5-19.
 //  Copyright (c) 2014年 PFei_He. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "PF_AppDelegate.h"
+#import "PF_GCD.h"
 
-@implementation AppDelegate
+@implementation PF_AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    PF_GCD *root = [[PF_GCD alloc] init];
+    self.window.rootViewController = root;
     [self.window makeKeyAndVisible];
     return YES;
 }
