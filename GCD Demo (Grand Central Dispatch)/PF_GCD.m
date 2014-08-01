@@ -27,7 +27,7 @@
 {
     [super viewDidLoad];
 
-    NSArray *array = [[NSArray alloc] initWithObjects:@"Serial Queue", @"Concurrent Queue", @"延迟3秒第一种", @"延迟3秒第二种", @"组任务执行完毕，执行某个任务", @"barrier", @"重复执行任务", @"单一执行任务", @"同步或异步", @"函数指针", nil];
+    NSArray *array = [[NSArray alloc] initWithObjects:@"串行队列", @"并行队列", @"延迟3秒第一种", @"延迟3秒第二种", @"组任务执行完毕，执行某个任务", @"任务中断", @"重复执行任务", @"单一执行任务", @"同步或异步", @"函数指针", nil];
     for (int i = 0; i <= 9; i++) {
         UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
         button.frame = CGRectMake(110, 50 + (i * 50), 100, 40);
@@ -233,7 +233,7 @@
 
     /*
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-        NSLog(@"Hello");
+        NSLog(@"PF_GCD_DEMO");
     });
      */
 
